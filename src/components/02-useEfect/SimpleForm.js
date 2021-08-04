@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './effects.css';
+import { Message } from './Message';
 
 export const SimpleForm = () => {
 
@@ -17,15 +18,15 @@ export const SimpleForm = () => {
     para escuchar un cambio muy especifico en alguna parte del 
     state o de la aplicacion */
     useEffect( () => {
-        console.log('hey!');
+        // console.log('hey!');
     }, [] );
 
     useEffect( () => {
-        console.log('Cambio en el formState!');
+        // console.log('Cambio en el formState!');
     }, [formState] );
 
     useEffect( () => {
-        console.log('El email cambio!');
+        // console.log('El email cambio!');
     }, [email] );
 
     const handleInputChange = ({ target }) => {
@@ -65,6 +66,8 @@ export const SimpleForm = () => {
                     onChange={ handleInputChange } 
                 />
             </div>
+
+            { (name === '123') &&  <Message /> }
 
         </>
     )
